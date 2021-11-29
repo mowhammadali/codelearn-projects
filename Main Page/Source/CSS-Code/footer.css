@@ -1,0 +1,184 @@
+@import url('header.css');
+
+
+/* footer */
+
+footer{
+    width: 100vw;
+    height: 50vh;
+    background-color: #1e1c22;
+}
+
+footer .partition{
+    height: 80%;
+    width: 60%;
+    padding-top: 50px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.partition #part1{
+    width: 120px;
+    height: auto;
+}
+
+.partition #part2{
+    height: auto;
+    width: 230px;
+}
+
+.partition #part3{
+    height: auto;
+    width: 100px;
+}
+
+#part1 h3 , #part2 h3 , #part3 h3{
+    color: var(--background-pg);
+    margin-bottom: 30px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid steelblue;
+    font-size: 15px;
+}
+
+#part1 li a , #part2 li a , #part3 li a{
+    color: #6e6e6e;
+
+}
+
+#part1 li a:hover , #part2 li a:hover , #part3 li a:hover{
+    color: #b9b9b9;
+}
+
+#part1 li , #part2 li , #part3 li{
+    margin-bottom: 8px;
+}
+
+#part3 h3{
+    width: 50px;
+}
+
+
+footer .copyright{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.copyright p{
+   color: var(--background-pg);
+   font-size: 14px;
+   margin-bottom: 8px;
+}
+
+
+/* footer */
+
+
+/* responsive for 1200px */
+
+@media screen and (max-width:1200px) {
+    footer .partition{
+        width: 70%;
+    }
+}
+
+/* responsive for 1200px */
+
+
+
+/* responsive for 992px */
+
+@media screen and (max-width:992px) {
+    footer .partition{
+        width: 75%;
+        justify-content: space-around;
+    }
+}
+
+/* responsive for 992px */
+
+
+
+/* responsive for 768px */
+
+@media screen and (max-width:768px) {
+    footer .partition{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #part1 h3 , #part2 h3 , #part3 h3{
+        font-size: 12px;
+    }
+
+    .partition #part1{
+        width: 100px;
+    }
+    
+    .partition #part2{
+        height: auto;
+        width: 180px;
+    }
+    
+    .partition #part3{
+        height: auto;
+        width: 90px;
+    }
+}
+
+/* responsive for 768px */
+
+
+
+/* responsive for 576px */
+
+@media screen and (max-width:576px) {
+    footer{
+        height: auto;
+    }
+
+    footer .partition{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .partition #part1 , .partition #part2{
+        margin-bottom:40px;
+    }
+
+    #part1 h3 , #part2 h3 , #part3 h3{
+        font-size: 14px;
+    }
+
+    .partition #part1{
+        width: 120px;
+    }
+    
+    .partition #part2{
+        height: auto;
+        width: 220px;
+    }
+
+    .copyright p{
+        font-size: 12px;
+    }
+}
+
+/* responsive for 576px */
+
+
+
+/* responsive for 360px */
+
+@media screen and (max-width:360px) {
+    .copyright p{
+        font-size: 10px;
+    }
+}
+
+/* responsive for 360px */

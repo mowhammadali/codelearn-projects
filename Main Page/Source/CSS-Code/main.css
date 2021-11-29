@@ -1,0 +1,439 @@
+@import url('header.css');
+
+/* main ****** */
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-pg);
+}
+section{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* section title***** */
+
+section #section-title{
+    width: 100%;
+    height: 240px;
+}
+
+#section-title h1{
+    width: 100%;
+    padding: 30px 0px;
+    font-size: 40px;
+}
+
+#section-title h1::after{
+    content: '';
+    height: 100%;
+    border-right: 8px solid #1c9653;
+    animation: auto 1s infinite ease-in-out;
+    -webkit-animation: auto 1s infinite ease-in-out;
+}
+
+@keyframes auto{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* section title***** */
+
+
+
+
+/* education container***** */
+section #education-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+
+#education-container .education-card{
+    height: 300px;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--background-pg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #a1a1a1,
+             -8px -8px 16px #ffffff;
+    transform: scale(.92);
+    transition: transform .3s ease-in-out;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    -webkit-transform: scale(.92);
+    -moz-transform: scale(.92);
+    -ms-transform: scale(.92);
+    -o-transform: scale(.92);
+    -webkit-transition: transform .3s ease-in-out;
+    -moz-transition: transform .3s ease-in-out;
+    -ms-transition: transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+}
+
+#education-container .education-card:hover{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+
+.education-card img{
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    object-fit: cover;
+    background-position:center;
+    border-radius: 6px 6px 0px 0px;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -moz-border-radius: 6px 6px 0px 0px;
+    -ms-border-radius: 6px 6px 0px 0px;
+    -o-border-radius: 6px 6px 0px 0px;
+}
+
+.education-card h4{
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+
+.education-card p{
+    font-size: 14px;
+    color: gray;
+}
+
+.education-card .price{
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    border-top: 1px solid #c2c2c2;
+    color: var(--main-color);
+}
+
+.education-card .more{
+    position: absolute;
+    right: -90px;
+    top: 50%;
+    width: 90px;
+    padding: 10px 4px;
+    font-size: 14px;
+    background-color:#0b4a9c;
+    color: #fff;
+    transition: right .4s ease-in-out;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -webkit-transition: right .4s ease-in-out;
+    -moz-transition: right .4s ease-in-out;
+    -ms-transition: right .4s ease-in-out;
+    -o-transition: right .4s ease-in-out;
+}
+
+.education-card:hover .more{
+    right: 0px;
+}
+
+.education-card .more:hover{
+    background-color: #ff9900;
+    color: var(--text-color-main);
+}
+
+
+/* education container***** */
+
+
+
+/* article */
+
+article{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* weblog title */
+
+article .weblog-title{
+    width: 100%;
+    margin: 250px 0px 100px 0px;
+}
+
+.weblog-title h1{
+    font-size: 40px;
+    animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
+}
+
+.weblog-title h1::before{
+    content: '';
+    height: 100%;
+    border-right: 8px solid #2fa363;
+    margin-left: 10px;
+}
+/* weblog title */
+
+
+
+/* weblog container */
+
+article .weblog-container{
+    width: 100%;
+    height: 70vh;
+    overflow-x: scroll;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.weblog-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.weblog-container .weblog-card{
+    height: 95%;
+    width: 32%;
+    margin-right: 2%;
+    direction: rtl;
+    border-radius: 0px;
+    box-shadow:  6px 6px 12px #848484,
+             -6px -6px 12px #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .2s ease-in-out;
+    transform: scale(.95);
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    -o-transform: scale(.95);
+    -webkit-transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    -ms-transition: transform .2s ease-in-out;
+    -o-transition: transform .2s ease-in-out;
+}
+
+.weblog-container .weblog-card:hover{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.weblog-card img{
+    width: 100%;
+    height: 45%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.weblog-card h2{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0px 15px;
+}
+
+.weblog-card p{
+    font-size: 18px;
+    padding: 0px 15px;
+    color: var(--text-color-main);
+}
+
+.weblog-card .more{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid gray;
+}
+
+.weblog-card .more a{
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+.weblog-card .more a:hover{
+    text-decoration: underline;
+    color: #0c75ca;
+}
+
+article .weblog-buttons{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.weblog-buttons a{
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--main-color);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.weblog-buttons a:hover{
+    color: var(--text-color-main);
+    background-color: #ff9900;
+}
+
+/* weblog container */
+
+/* article */
+
+
+
+/* responsive for 1200px */
+@media screen and (max-width:1200px) {
+    section #education-container{
+        grid-gap: 10px;
+    }
+
+    .education-card h4{
+        font-size: 18px;
+    }
+}
+/* responsive for 1200px */
+
+
+/* responsive for 992px */
+@media screen and (max-width:992px) {
+    
+    section #education-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #education-container .education-card{
+        height: 350px;
+    }
+
+    .education-card img{
+        height: 60%;
+    }
+
+    .education-card h4{
+        font-size: 20px;
+    }
+
+    .education-card .more{
+        top: 60%;
+    }
+
+    .weblog-container .weblog-card{
+        width: 48%;
+    }
+}
+/* responsive for 992px */
+
+
+/* responsive for 768px */
+@media screen and (max-width:768px) {
+    #section-title h1{
+        font-size: 35px;
+    }
+}
+/* responsive for 768px */
+
+
+
+/* responsive for 576px */
+@media screen and (max-width:576px) {
+    #section-title h1{
+        font-size: 27px;
+    }
+
+    section #education-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12,1fr);
+    }
+
+    .education-card h4{
+        font-size: 24px;
+    }
+
+    .weblog-container .weblog-card{
+        width: 96%;
+    }
+
+    .weblog-card img{
+        height: 55%;
+    }
+
+    .weblog-card h2{
+        font-size: 18px;
+    }
+    
+    .weblog-card p{
+        font-size: 16px;
+    }
+}
+/* responsive for 576px */
+
+
+
+/* responsive for 360px */
+@media screen and (max-width:360px) {
+    #section-title h1{
+        font-size: 22px;
+    }
+
+    .education-card h4{
+        font-size: 18px;
+    }
+
+    .weblog-card h2{
+        font-size: 16px;
+    }
+    
+    .weblog-card p{
+        font-size: 14px;
+    }
+}
+/* responsive for 360px */
+
+
+/* main ****** */
